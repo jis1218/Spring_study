@@ -7,4 +7,4 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/jis1218/Spring_study/tree/master/spring-cloud-config/spring-cloud-config-server
+          uri: https://github.com/jis1218/Spring_study/tree/master/spring-cloud-config/spring-cloud-config-repository
