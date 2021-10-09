@@ -22,3 +22,20 @@
 ##### 그래서 성능 테스트를 꼭 해봐야 함...
 ##### 툴 : 아파치 ab, 제이미터, nGrinder(네이버 오픈소스...)
 ##### 
+
+##### WEB-INF 안에 있는 view는 직접 호출이 안됨, 컨트롤러(서블릿)를 통해서만 가능
+
+
+##### Servlet으로 개발을 하게 되면 view 코드가 Servlet 클래스 안에 생기게 되어 지저분하게 된다.
+##### 그래서 JSP로 뷰를 개발하게 되었는데 역시나 JSP 안에 비즈니스 로직이 생기게 되어 유지보수 하기가 어려워진다.
+##### 따라서 나온게 MVC 패턴이다. Controller는 서블릿, View는 JSP, Model은 Controller에서 View로 데이터를 넘겨줄 때 사용하는 객체라고 생각하면 되겠다.
+##### 하지만 MVC 패턴도 한계가 있으니 바로 서블릿에서 JSP에 foward 해주는 코드 등 중복되는 코드가 많다는 것이다.
+```java
+RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
+dispatcher.forward(request, response);
+
+String viewPath = "/WEB-INF/views/new-form.jsp";
+```
+
+##### 그리고 HttpServletRequest request, HttpServletResponse response는 테스트 하기도 쉽지 않다.  
+##### 그래서 공통기능을 처리하는 서블릿을 Front Controller 패턴으로 도입하게 되었다.
