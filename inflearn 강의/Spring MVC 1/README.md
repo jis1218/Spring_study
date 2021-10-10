@@ -39,3 +39,69 @@ String viewPath = "/WEB-INF/views/new-form.jsp";
 
 ##### 그리고 HttpServletRequest request, HttpServletResponse response는 테스트 하기도 쉽지 않다.  
 ##### 그래서 공통기능을 처리하는 서블릿을 Front Controller 패턴으로 도입하게 되었다.
+
+##버젼 1
+
+##### 1. FrontController에서 URL 매핑 정보를 조회한다.
+```java
+private Map<String, ControllerV1> controllerMap = new HashMap<>();
+
+public FrontControllerServletV1() {
+    controllerMap.put("/front-controller/v1/members/new-form", new
+    MemberFormControllerV1());
+    controllerMap.put("/front-controller/v1/members/save", new
+    MemberSaveControllerV1());
+    controllerMap.put("/front-controller/v1/members", new
+    MemberListControllerV1());
+}
+```
+##### 2. 매핑정보를 바탕으로 컨트롤러를 호출한다.
+##### 3. 컨트롤러에서 바로 JSP를 forward한다.
+
+## 버전 2
+
+##### 버전 1에서는 컨트롤러에서 바로 JSP를 forward를 하였지만 이러면 컨트롤러마다 이 로직이 중복되게 되므로 이것을 FrontController에서 대신 처리해준다.
+
+```java
+public class MemberFormControllerV2 implements ControllerV2 {
+    @Override
+    public MyView process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        return new MyView("/WEB-INF/views/new-form.jsp");
+        }
+}
+```
+
+```java
+public class FrontControllerServletV2 extends HttpServlet {
+
+    @Override
+    protected void service(HttpServletRequest request, HttpServletResponse
+    response)
+    throws ServletException, IOException {
+        String requestURI = request.getRequestURI();
+
+        ControllerV2 controller = controllerMap.get(requestURI);
+
+        MyView view = controller.process(request, response);
+        view.render(request, response);
+    }
+}
+```
+
+## 버전 3
+
+##### 컨트롤러에서는 ModelView를 반환한다. ModelView는 데이터를 담는 Model과 View 이름을 반환하는 것이 합쳐진 것이다.
+##### 그리고 프론트 컨트롤러의 viewResolver라는 메서드가 MyView를 반환한다.
+
+## 버전 4
+
+##### 컨트롤러에서는 view 이름만 반환하고 FrontController에서 model을 처리한다. 컨트롤러는 Model 인자를 받기는 한다.
+
+## 버전 5
+##### 다양한 컨트롤러를 처리하기 위해 컨트롤러 어댑터(HandlerAdapter)를 이용한다.
+
+##### 먼저 컨트롤러(Handler) 매핑정보를 이용하여 컨트롤러를 가져오고 handlerAdapter 목록을 조회하여 handlerAdpater도 가져온다.
+
+##### 프론트 컨트롤러에서는 이 핸들러 어댑터를 이용하여 핸드러의 메서드를 호출하고 ModelView를 어댑터로부터 받는다.
+
+##### 즉 어댑터 패턴은 다양한 형식의 클래스의 결과값을 일관된 형식으로 맞춰주는 역할을 한다.
