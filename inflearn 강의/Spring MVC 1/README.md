@@ -105,3 +105,21 @@ public class FrontControllerServletV2 extends HttpServlet {
 ##### 프론트 컨트롤러에서는 이 핸들러 어댑터를 이용하여 핸드러의 메서드를 호출하고 ModelView를 어댑터로부터 받는다.
 
 ##### 즉 어댑터 패턴은 다양한 형식의 클래스의 결과값을 일관된 형식으로 맞춰주는 역할을 한다.
+
+##### SpringBootServletInitializer를 상속받은 클래스가 생기는 이유?
+```java
+public class ServletInitializer extends SpringBootServletInitializer {
+
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(ServletApplication.class);
+	}
+
+}
+```
+##### 이번 프로젝트는 war로 빌드할 것이기 때문에...
+##### https://medium.com/@SlackBeck/spring-boot-%EC%9B%B9-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%EC%9D%84-war%EB%A1%9C-%EB%B0%B0%ED%8F%AC%ED%95%A0-%EB%95%8C-%EC%99%9C-springbootservletinitializer%EB%A5%BC-%EC%83%81%EC%86%8D%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94%EA%B1%B8%EA%B9%8C-a07b6fdfbbde
+##### https://serverwizard.tistory.com/165
+
+
+##### Servlet의 HttpServletRequest의 getParameter()는 GET URL 쿼리 파라미터 형식도 지원하고 POST HTML Form 형식도 지원한다.
