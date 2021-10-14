@@ -123,3 +123,12 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
 
 ##### Servlet의 HttpServletRequest의 getParameter()는 GET URL 쿼리 파라미터 형식도 지원하고 POST HTML Form 형식도 지원한다.
+
+
+## Head First Servlet & JSP를 보며 배운 점
+##### 컨테이너는 서블릿을 실행 및 관리한다.
+##### 컨테이너(ex 톰캣)는 다음과 같은 역할을 한다.
+##### 1. 통신 지원 - ServerSocket 만들고 특정포트 리스닝하고 연결 요청이 들어오면 스트림 생성 등등...
+##### 2. 생명주기(라이프사이클) 관리
+##### 3. 멀티스레딩 지원
+##### 4. 선언적인 보안관리
