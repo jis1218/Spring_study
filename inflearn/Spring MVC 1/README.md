@@ -124,6 +124,20 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
 ##### Servlet의 HttpServletRequest의 getParameter()는 GET URL 쿼리 파라미터 형식도 지원하고 POST HTML Form 형식도 지원한다.
 
+##### war 파일로 빌드할 때 .jsp를 WEB-INF 안에 숨기는 이유...
+##### 컨트롤러가 호출하는 자바 클래스에서 로직 처리를 끝내고서 JSP 파일로 포워딩을 한다.
+##### 여기서 JSP파일은 실제로 웹 브라우저의 주소창에 나타나지 않는다.
+##### 포워딩을 할 경우 포워딩 시키기 전에 웹브라우저가 호출한 주소가 남아 있고, 포워딩된 주소는 단지 서버측에서 실행되어 결과만을 웹브라우저로 전달한다.
+##### JSP/Servlet 컨테이너는 WEB-INF 디렉토리 이하를 보안상의 문제로 웹 브라우저를 통한 접근을 금지하고 있다. 하지만 포워딩을 통한 접근은 웹 브라우저를 통하지 않기 때문에 가능하다.
+##### http://egloos.zum.com/kwon37xi/v/2850553
+##### 다시 한번 'WEB-INF 디렉토리 이하를 보안상의 문제로 웹 브라우저를 통한 접근을 금지하고 있다.'
+
+```java
+@RequestParam(required = false) int age
+```
+##### 위 코드에서 age를 넘겨주지 않으면 500 에러가 난다.
+
+##### @RequestBody를 사용하면 HTTP 메시지 바디 정보를 편리하게 조회 가능, 헤더 정보가 필요하다면 HttpEntity(RequestEntity)를 이용하거나 @RequestHeader를 이용하자
 
 ## Head First Servlet & JSP를 보며 배운 점
 ##### 컨테이너는 서블릿을 실행 및 관리한다.
