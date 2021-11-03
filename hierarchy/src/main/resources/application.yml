@@ -1,0 +1,17 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3308/whatailsyou
+    username: root
+    password:
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 3
+  sql:
+    init:
+      mode: always
+server:
+  port: 9191

@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS Products;
+
+CREATE TABLE `recursion`
+(
+    `id`      VARCHAR(45) NULL DEFAULT NULL,
+    `m_name`  VARCHAR(50) NULL DEFAULT NULL,
+    `depth`   INT(10) NULL DEFAULT NULL,
+    `parent`  VARCHAR(50) NULL DEFAULT NULL,
+    `m_order` VARCHAR(50) NULL DEFAULT NULL
+)
+
