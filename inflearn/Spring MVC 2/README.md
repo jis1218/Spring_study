@@ -35,7 +35,11 @@ public interface HttpSessionContext {
 ##### 다중 서버 환경에서 세션을 관리하는 방법
 ##### https://velog.io/@hyeminn/%EB%8B%A4%EC%A4%91-%EC%84%9C%EB%B2%84-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-%EC%84%B8%EC%85%98%EC%9D%84-%EA%B4%80%EB%A6%AC%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95
 
+
 ##### Dispatcher Servlet은 그 많은 요청(Request)를 어떻게 처리할까?
 ##### 일단 Request 별로 Thread가 하나씩 생기는 것이고
 ##### 근데 메서드는 아무리 많이 참조가 되어도 동시에 처리가 되는 것이기 때문에 Dispatcher Servlet도 같은 개념으로 많은 요청을 처리한다고 생각할 수 있다...
 ##### https://jeong-pro.tistory.com/204
+
+##### 필터 -> 서블릿이 제공하는 기능
+##### 인터셉터 -> 스프링이 제공하는 기능
