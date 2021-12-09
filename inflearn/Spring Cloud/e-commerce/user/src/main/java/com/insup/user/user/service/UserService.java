@@ -5,6 +5,9 @@ import com.insup.user.user.dto.UserResponse;
 import com.insup.user.user.domain.User;
 import com.insup.user.user.domain.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +17,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-public class UserService {
+public class UserService implements UserDetailsService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
@@ -43,5 +46,10 @@ public class UserService {
         User user = userRepository.findById(userId).orElseThrow(() -> new NoSuchElementException("찾는 사용자가 없습니다"));
 
         return UserResponse.of(user);
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        return null;
     }
 }

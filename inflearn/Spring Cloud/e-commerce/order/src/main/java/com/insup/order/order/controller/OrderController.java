@@ -1,5 +1,6 @@
 package com.insup.order.order.controller;
 
+import com.insup.order.order.domain.Order;
 import com.insup.order.order.dto.OrderRequest;
 import com.insup.order.order.dto.OrderResponse;
 import com.insup.order.order.service.OrderService;
@@ -32,7 +33,7 @@ public class OrderController {
     }
 
     @GetMapping("/user/{userId}")
-    public ResponseEntity getOrderByUserId(@PathVariable String userId) {
+    public ResponseEntity getOrdersByUserId(@PathVariable String userId) {
         List<OrderResponse> orderResponses = orderService.getOrdersByUserId(userId);
 
         return ResponseEntity.status(HttpStatus.OK).body(orderResponses);

@@ -1,16 +1,16 @@
 package com.insup.order.order.domain;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Getter
 @Entity
+@NoArgsConstructor
+@Table(name = "orders")
 public class Order {
 
     @Id
@@ -31,4 +31,13 @@ public class Order {
 
     @CreatedDate
     private Date createdAt;
+
+    public Order(String productId, Integer quantity, int unitPrice, int totalPrice, String userId, String orderId) {
+        this.productId = productId;
+        this.quantity = quantity;
+        this.unitPrice = unitPrice;
+        this.totalPrice = totalPrice;
+        this.userId = userId;
+        this.orderId = orderId;
+    }
 }

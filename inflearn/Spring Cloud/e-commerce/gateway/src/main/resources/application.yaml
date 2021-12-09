@@ -23,6 +23,12 @@ spring:
         - id : catalog-service
           uri: lb://CATALOG-SERVICE
           predicates:
-            - Path=/catalog/**
+            - Path=/catalogs/**
+          filters:
+            - CustomFilter
+        - id: order-service
+          uri: lb://ORDER-SERVICE
+          predicates:
+            - Path=/orders/**
           filters:
             - CustomFilter
