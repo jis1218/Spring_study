@@ -1,5 +1,6 @@
 package com.insup.user.user.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -9,6 +10,7 @@ import javax.validation.constraints.Size;
 
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
 public class UserRequest {
 
     @NotNull(message = "userId not good")
@@ -16,7 +18,6 @@ public class UserRequest {
 
     @NotNull(message = "email not good")
     @Size(min = 2, message = "Email not be less than two characters")
-    @Email
     private String email;
 
     @NotNull(message = "Name not good")

@@ -5,24 +5,16 @@
 build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 <
 user/HELP.md,1\6\16c03c58bfb16cc3e3e13d36455914e20a89f596
-q
-Auser/src/main/java/com/insup/user/user/domain/UserRepository.java,c\2\c24556f2539d2c0be16518ff3f660364157882ed
 ?
 gateway/HELP.md,7\9\7975d688085ec93b6dad687193c5dc6824bbe054
 p
 @gateway/src/main/java/com/insup/gateway/filter/CustomFilter.java,3\d\3da94f93cbf6921e1d6965a567588fe6d6421dde
-u
-Euser/src/main/java/com/insup/user/user/controller/UserController.java,c\1\c1feef773cf3fd1238c4c33381ec0e2d2948aa03
 j
 :user/src/main/java/com/insup/user/order/OrderResponse.java,6\7\67fc1a9e5b06b73ae354519be47b5155154f9f46
-l
-<user/src/main/java/com/insup/user/user/dto/UserResponse.java,8\a\8a429b70d8c280bee80a46ecb3bf4a4d47544bb6
 ?
 catalog/HELP.md,a\9\a91f87ce1ef5ef3a3a683696d4bcfddb29cc73dc
 }
 Mcatalog/src/main/java/com/insup/catalog/catalog/domain/CatalogRepository.java,d\7\d7e0e59ba3e3d7e666c4556cc3d781eed0d00426
-A
-user/build.gradle,d\4\d43607b150253df0404ac65785cd499e6cacfe89
 s
 Ccatalog/src/main/java/com/insup/catalog/catalog/domain/Catalog.java,e\5\e50f302dcce71b6d87a2e03e67a9e8d12036fe21
 w
@@ -45,8 +37,6 @@ o
 ?gateway/src/main/java/com/insup/gateway/GatewayApplication.java,e\6\e69da98d4f0ece9c69b8c97531e7965891d32f21
 D
 catalog/build.gradle,7\e\7efc45e641c1845572dddce3c7dfa1be9ce5fc30
-f
-6user/src/main/java/com/insup/user/UserApplication.java,b\6\b66222653a342805f20c1df7ff24afc520dea4bc
 v
 Forder/src/main/java/com/insup/order/security/WebSecurityConfigure.java,2\c\2cdc231f87cfae8c1cdcc24664a3df260c86db3b
 
@@ -61,13 +51,3 @@ k
 ;order/src/main/java/com/insup/order/order/domain/Order.java,6\5\6527598a0fcf91c67589b6b84960defb869026a9
 y
 Iorder/src/main/java/com/insup/order/order/controller/OrderController.java,f\e\fead9375f232a08801d1312f9f00c3dd51444beb
-k
-;user/src/main/java/com/insup/user/user/dto/UserRequest.java,7\6\7676e08f2aabea80c6c138671181e1f85f868e89
-l
-<user/src/main/java/com/insup/user/user/dto/LoginRequest.java,d\5\d5723dc39e87b6802bf523ad2a579c178b426267
-o
-?user/src/main/java/com/insup/user/user/service/UserService.java,7\0\700438de8561c144854b556d40d00c2091670e4d
-t
-Duser/src/main/java/com/insup/user/security/AuthenticationFilter.java,f\0\f0e93a9d6b3677dcbbc9fcfc51268ee992b2c272
-t
-Duser/src/main/java/com/insup/user/security/WebSecurityConfigure.java,4\4\44a5663c406624c5e2aa105fce2c40c81d4bcf8b

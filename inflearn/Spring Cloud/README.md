@@ -17,3 +17,13 @@
 ##### 그래서 tomcat이 아니라 netty가 실행된다. netty는 비동기 기반인가보다...
 
 ##### Spring cloud gateway를 사용할 때 로드밸런서를 사용하면 기본적으로 Round-robin 방식으로 동작을 한다.
+
+##### 아무리 로그인을 해도 UsernamePasswordAuthenticationFilter를 상속한 나의 CustomFilter가 동작하지 않은 이유...
+
+##### UsernamePasswordAuthenticationFilter는 /login 에 접근하였을 때만 trigger 되기 때문에
+##### 생성자에서 this.setFilterProcessesUrl을 추가해줘야 한다...
+```
+public AuthenticationFilter() {
+        this.setFilterProcessesUrl("/users/login");
+    }
+```

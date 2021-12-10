@@ -34,6 +34,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-validation:2.6.1'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.security:spring-security-test'
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '4.4.0'
+
 }
 
 dependencyManagement {

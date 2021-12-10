@@ -1,5 +1,6 @@
 package com.insup.user.security;
 
+import com.insup.user.user.service.CustomUserDetailService;
 import com.insup.user.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -11,13 +12,14 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.access.channel.ChannelProcessingFilter;
 
 @RequiredArgsConstructor
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfigure extends WebSecurityConfigurerAdapter {
 
-    private final UserService userService;
+    private final CustomUserDetailService customUserDetailService;
 
     @Override
     public void configure(WebSecurity web) throws Exception {
@@ -26,11 +28,16 @@ public class WebSecurityConfigure extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable()
-                .authorizeRequests().antMatchers("/**")
-                .hasIpAddress("*")
+        http
+                .csrf().disable()
+                .formLogin().and()
+                .authorizeRequests()
+                .antMatchers("/users/login")
+                .authenticated()
+                .antMatchers("/**").permitAll()
                 .and()
                 .addFilter(getAuthenticationFilter());
+//                .addFilterBefore(getAuthenticationFilter(), ChannelProcessingFilter.class);
 
 //                .authorizeRequests().antMatchers("/users/**").permitAll();
     }
@@ -44,7 +51,7 @@ public class WebSecurityConfigure extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userService);
+        auth.userDetailsService(customUserDetailService);
     }
 
     @Bean

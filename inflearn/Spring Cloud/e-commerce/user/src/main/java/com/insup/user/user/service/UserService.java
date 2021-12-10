@@ -1,5 +1,6 @@
 package com.insup.user.user.service;
 
+import com.insup.user.user.dto.LoginRequest;
 import com.insup.user.user.dto.UserRequest;
 import com.insup.user.user.dto.UserResponse;
 import com.insup.user.user.domain.User;
@@ -10,14 +11,17 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 @Service
+@Transactional
 @RequiredArgsConstructor
-public class UserService implements UserDetailsService {
+public class UserService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
@@ -42,14 +46,13 @@ public class UserService implements UserDetailsService {
                 .collect(Collectors.toList());
     }
 
-    public UserResponse findUser(Long userId) {
-        User user = userRepository.findById(userId).orElseThrow(() -> new NoSuchElementException("찾는 사용자가 없습니다"));
+    public UserResponse findUserByUserId(String userId) {
+        User user = userRepository.findByUserId(userId).orElseThrow(() -> new NoSuchElementException("찾는 사용자가 없습니다"));
 
         return UserResponse.of(user);
     }
 
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return null;
+    public void login(LoginRequest loginRequest) {
+
     }
 }

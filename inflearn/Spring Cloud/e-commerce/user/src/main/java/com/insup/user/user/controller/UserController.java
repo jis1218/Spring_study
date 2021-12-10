@@ -1,5 +1,6 @@
 package com.insup.user.user.controller;
 
+import com.insup.user.user.dto.LoginRequest;
 import com.insup.user.user.dto.UserRequest;
 import com.insup.user.user.dto.UserResponse;
 import com.insup.user.user.service.UserService;
@@ -47,9 +48,16 @@ public class UserController {
     }
 
     @GetMapping("/user/{userId}")
-    public ResponseEntity findUser(@PathVariable Long userId) {
-        UserResponse userResponse = userService.findUser(userId);
+    public ResponseEntity findUser(@PathVariable String userId) {
+        UserResponse userResponse = userService.findUserByUserId(userId);
 
         return ResponseEntity.status(HttpStatus.OK).body(userResponse);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity login(@RequestBody LoginRequest loginRequest) {
+        userService.login(loginRequest);
+
+        return ResponseEntity.status(HttpStatus.OK).build();
     }
 }
