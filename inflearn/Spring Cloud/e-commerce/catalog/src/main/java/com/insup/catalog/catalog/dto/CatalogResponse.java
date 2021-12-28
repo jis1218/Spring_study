@@ -9,11 +9,11 @@ import java.util.Date;
 @Getter
 @AllArgsConstructor
 public class CatalogResponse {
-    private String productId;
-    private String productName;
-    private Integer stock;
-    private Integer unitPrice;
-    private Date createdAt;
+    private final String productId;
+    private final String productName;
+    private final Integer stock;
+    private final Integer unitPrice;
+    private final Date createdAt;
 
     public static CatalogResponse of(Catalog catalog) {
         return new CatalogResponse(

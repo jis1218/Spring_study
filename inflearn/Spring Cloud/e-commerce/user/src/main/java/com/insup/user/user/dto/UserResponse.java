@@ -10,10 +10,10 @@ import java.util.List;
 @Getter
 @AllArgsConstructor
 public class UserResponse {
-    private Long id;
-    private String userId;
-    private String email;
-    private String name;
+    private final Long id;
+    private final String userId;
+    private final String email;
+    private final String name;
 
     private List<OrderResponse> orderResponses;
 

@@ -6,15 +6,15 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public class OrderRequest {
-    private String productId;
+    private final String productId;
 
-    private Integer quantity;
+    private final Integer quantity;
 
-    private int unitPrice;
+    private final int unitPrice;
 
-    private int totalPrice;
+    private final int totalPrice;
 
-    private String userId;
+    private final String userId;
 
-    private String orderId;
+    private final String orderId;
 }

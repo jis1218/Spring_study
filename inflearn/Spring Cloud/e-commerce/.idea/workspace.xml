@@ -5,29 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ff997d8-669b-4701-ad0d-5f8c52dd0343" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries-with-intellij-classes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/44a5663c406624c5e2aa105fce2c40c81d4bcf8b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/700438de8561c144854b556d40d00c2091670e4d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/7676e08f2aabea80c6c138671181e1f85f868e89" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/a/8a429b70d8c280bee80a46ecb3bf4a4d47544bb6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b66222653a342805f20c1df7ff24afc520dea4bc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/1/c1feef773cf3fd1238c4c33381ec0e2d2948aa03" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/2/c24556f2539d2c0be16518ff3f660364157882ed" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d43607b150253df0404ac65785cd499e6cacfe89" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/5/d5723dc39e87b6802bf523ad2a579c178b426267" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f0e93a9d6b3677dcbbc9fcfc51268ee992b2c272" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/d/3da94f93cbf6921e1d6965a567588fe6d6421dde" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/user/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/src/main/java/com/insup/catalog/catalog/dto/CatalogResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/src/main/java/com/insup/catalog/catalog/dto/CatalogResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/src/main/java/com/insup/order/order/dto/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/com/insup/order/order/dto/OrderRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/src/main/java/com/insup/order/order/dto/OrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/com/insup/order/order/dto/OrderResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/src/main/java/com/insup/user/security/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/insup/user/security/AuthenticationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/src/main/java/com/insup/user/security/WebSecurityConfigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/insup/user/security/WebSecurityConfigure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/insup/user/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/insup/user/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/insup/user/user/domain/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/insup/user/user/domain/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/insup/user/user/dto/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/insup/user/user/dto/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/insup/user/user/dto/UserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/insup/user/user/dto/UserRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/insup/user/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/insup/user/user/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/insup/user/user/dto/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/insup/user/user/dto/UserResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +37,18 @@
     <projectState path="$PROJECT_DIR$/user">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -88,6 +87,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/order/src/main/resources" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -105,18 +105,7 @@
       <recent name="com.insup.catalog.security" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.UserControllerTest.loginTestFail">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.UserControllerTest.loginTest">
     <configuration name="UserControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -210,8 +199,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.UserControllerTest.loginTestFail" />
         <item itemvalue="Gradle.UserControllerTest.loginTest" />
+        <item itemvalue="Gradle.UserControllerTest.loginTestFail" />
         <item itemvalue="Gradle.UserControllerTest" />
         <item itemvalue="Spring Boot.GatewayApplication" />
       </list>
@@ -230,7 +219,15 @@
       <updated>1638928626101</updated>
       <workItem from="1638928628419" duration="16565000" />
       <workItem from="1639016287376" duration="8143000" />
-      <workItem from="1639105229241" duration="18391000" />
+      <workItem from="1639105229241" duration="18921000" />
+      <workItem from="1639358059925" duration="287000" />
+      <workItem from="1639358376439" duration="10942000" />
+      <workItem from="1639835027790" duration="910000" />
+      <workItem from="1639960573094" duration="2769000" />
+      <workItem from="1640130777384" duration="3236000" />
+      <workItem from="1640219876415" duration="1328000" />
+      <workItem from="1640319781590" duration="1411000" />
+      <workItem from="1640666686388" duration="3928000" />
     </task>
     <servers />
   </component>
@@ -252,11 +249,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/user/src/main/java/com/insup/user/security/AuthenticationFilter.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-web/5.6.0/2bf2535bbcd7b2952e483fcb15f24c3ef2e2e585/spring-security-web-5.6.0-sources.jar!/org/springframework/security/web/authentication/UsernamePasswordAuthenticationFilter.java</url>
           <line>73</line>
@@ -285,11 +277,67 @@
           </properties>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-core/5.6.0/7b0caa37222aa381b7d0e1e6fa66914a8c971cbd/spring-security-core-5.6.0-sources.jar!/org/springframework/security/authentication/ProviderManager.java</url>
+          <line>166</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-core/5.6.0/7b0caa37222aa381b7d0e1e6fa66914a8c971cbd/spring-security-core-5.6.0-sources.jar!/org/springframework/security/authentication/dao/DaoAuthenticationProvider.java</url>
+          <line>92</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/user/src/main/java/com/insup/user/security/AuthenticationFilter.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-web/5.6.0/2bf2535bbcd7b2952e483fcb15f24c3ef2e2e585/spring-security-web-5.6.0-sources.jar!/org/springframework/security/web/authentication/AbstractAuthenticationProcessingFilter.java</url>
+          <line>348</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-web/5.6.0/2bf2535bbcd7b2952e483fcb15f24c3ef2e2e585/spring-security-web-5.6.0-sources.jar!/org/springframework/security/web/authentication/AbstractAuthenticationProcessingFilter.java</url>
+          <line>352</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-web/5.6.0/2bf2535bbcd7b2952e483fcb15f24c3ef2e2e585/spring-security-web-5.6.0-sources.jar!/org/springframework/security/web/authentication/AbstractAuthenticationProcessingFilter.java</url>
+          <line>163</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-web/5.6.0/2bf2535bbcd7b2952e483fcb15f24c3ef2e2e585/spring-security-web-5.6.0-sources.jar!/org/springframework/security/web/authentication/AbstractAuthenticationProcessingFilter.java</url>
+          <line>177</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/user/src/main/java/com/insup/user/security/WebSecurityConfigure.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-config/5.6.0/a4a9553acf39f6f807a10dfd6b43328de52c9589/spring-security-config-5.6.0-sources.jar!/org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.java</url>
+          <line>262</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-config/5.6.0/a4a9553acf39f6f807a10dfd6b43328de52c9589/spring-security-config-5.6.0-sources.jar!/org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.java</url>
+          <line>188</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/user/src/main/java/com/insup/user/security/WebSecurityConfigure.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="GradleRunConfiguration">
-        <watch expression="filters" language="Groovy" />
+        <watch expression="getAuthenticationManager()" language="JAVA" />
+        <watch expression="authenticationManager()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

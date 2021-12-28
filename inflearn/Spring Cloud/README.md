@@ -22,8 +22,29 @@
 
 ##### UsernamePasswordAuthenticationFilter는 /login 에 접근하였을 때만 trigger 되기 때문에
 ##### 생성자에서 this.setFilterProcessesUrl을 추가해줘야 한다...
-```
+```java
 public AuthenticationFilter() {
         this.setFilterProcessesUrl("/users/login");
     }
 ```
+
+
+##### 왜 아래와 같이 설정하면 
+
+```java
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//        auth.userDetailsService(customUserDetailService);
+    }
+```
+
+```java
+        return getAuthenticationManager()
+        .authenticate(
+            new UsernamePasswordAuthenticationToken(loginRequest.getUserId(), loginRequest.getPassword(), new ArrayList<>())
+            );
+```
+##### 위의 코드의 getAuthenticationManger()는 null이 되는가??
+##### https://stackoverflow.com/questions/51986766/spring-security-getauthenticationmanager-returns-null-within-custom-filter
+
+##### 스프링 시큐리티 관련 내용인데...

@@ -9,17 +9,17 @@ import java.util.Date;
 @AllArgsConstructor
 @Getter
 public class OrderResponse {
-    private String productId;
+    private final String productId;
 
-    private Integer quantity;
+    private final Integer quantity;
 
-    private int unitPrice;
+    private final int unitPrice;
 
-    private int totalPrice;
+    private final int totalPrice;
 
-    private String orderId;
+    private final String orderId;
 
-    private Date createdAt;
+    private final Date createdAt;
 
     public static OrderResponse of(Order order) {
         return new OrderResponse(

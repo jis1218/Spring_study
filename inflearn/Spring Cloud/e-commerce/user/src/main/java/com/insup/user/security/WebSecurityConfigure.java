@@ -49,10 +49,12 @@ public class WebSecurityConfigure extends WebSecurityConfigurerAdapter {
         return authenticationFilter;
     }
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(customUserDetailService);
-    }
+//    @Override
+//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//        auth.authenticationProvider(getAuthenticationFilter());
+//        auth.userDetailsService(customUserDetailService);
+//    }
+
 
     @Bean
     PasswordEncoder passwordEncoder() {
